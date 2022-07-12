@@ -5,6 +5,7 @@ use App\Models\Company;
 use Illuminate\Http\Request;
 use App\Http\Requests\CompanyRequest;
 
+use DB;
 class CompanyController extends Controller
 {
     /**
@@ -100,5 +101,23 @@ class CompanyController extends Controller
     {
         Company::destroy($id);
 		return redirect()->route('company.index')->with('update_success','Entreprise supprimée avec succès');
+    }
+
+    /**
+     * List Top20 companies for every year.
+     *
+     * @param  void
+     * @return \Illuminate\Http\Response
+     */
+    public function top20()
+    {
+        //
+         $top20 = DB::table('turn_over_companies')
+            ->join('companies', 'companies.id', '=','turn_over_companies.company_id')
+            ->select('companies.name as company_name', DB::raw("SUM(sales_amount) as sales_amount"))
+            ->groupby('company_id')
+            ->get();
+        //dd($top20);
+		//return redirect()->route('company.index')->with('update_success','Entreprise supprimée avec succès');
     }
 }

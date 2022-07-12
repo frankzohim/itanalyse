@@ -26012,3 +26012,7 @@ body.rtl .account-setting {
 @media (max-width: 360px) {
   .rtl .timer span .padding-l {
     padding-right: 10px; } }
+
+.numbers{
+  font-weight: bold;
+}

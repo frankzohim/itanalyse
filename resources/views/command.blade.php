@@ -10,7 +10,7 @@
                         <div class="col-lg-6">
                             <div class="page-header-left">
                                 <h3>Suivi des commandes
-                                    <small>Kensoh Dashboard</small>
+                                    <small>Tableau de bord IT</small>
                                 </h3>
                             </div>
                         </div>
@@ -28,7 +28,7 @@
             <div class="container-fluid">
                 <div class="card">
                     <div class="card-header">
-                        <h5>Suivi des commandes au 25 Avril 2022</h5>
+                        <h5>Suivi des commandes au 11 Juillet 2022</h5>
                     </div>
                         <iframe src="/assets/controle.pdf" type="application/pdf" style="height:1000px;width:1500px;">
                 </div>

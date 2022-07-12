@@ -61,7 +61,7 @@
                                 <th>Nom</th>
                                 <th>Téléphone</th>
                                 <th>Adresse</th>
-                               @if(auth()->user()->role_id == 1 || auth()->user()->role_id == 4 || auth()->user()->role_id == 6)
+                               @if(auth()->user()->role_id == 1 || auth()->user()->role_id == 4 || auth()->user()->role_id == 6 || auth()->user()->role_id == 5)
                                 <th>Actions</th>
                                @endif
                             </tr>
@@ -76,7 +76,7 @@
 									</td>
 									<td>{{$provider->phone}}</td>
 									<td>{{$provider->address}}</td>
-                                                                        @if(auth()->user()->role_id == 1 || auth()->user()->role_id == 4 || auth()->user()->role_id == 6)
+                                                                        @if(auth()->user()->role_id == 1 || auth()->user()->role_id == 4 || auth()->user()->role_id == 6 || auth()->user()->role_id == 5)
 									<td>
 								
 										<a href="{{route('provider.edit',$provider->id)}}"><i class="fa fa-edit me-2 font-success"></i></a>

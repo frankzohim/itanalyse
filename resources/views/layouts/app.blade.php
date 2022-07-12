@@ -121,5 +121,21 @@
     <!--script admin-->
     <script src="assets/backend/js/admin-script.js"></script>
 
+    <!--script chart-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+     <!--script admin-->
+
+    <script >
+        function showTop20(){
+          for(let i = 6; i <=20; i++){
+            let id = `top20-${i}`;
+            //console.log(id);
+            document.getElementById(`top20-${i}`).style = "display:inline";
+          }
+           
+        }
+    </script>
+ 
 </body>
 </html>

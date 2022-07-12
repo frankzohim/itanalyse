@@ -1,6 +1,21 @@
 @extends('layouts.app')
 @section('title', __('Tableau de bord'))
-
+@php
+    $months = [
+        1 =>'Janvier',
+        2 =>'Février',
+        3 =>'Mars',
+        4 =>'Avril',
+        5 =>'Mai',
+        6 =>'Juin',
+        7 =>'Août',
+        8 =>'Septembre',
+        9 =>'Juillet',
+        10 =>'Octobre',
+        11 =>'Novembre',
+        12 =>'Décembre'
+    ];
+@endphp
 @section('content')
 <!-- Container-fluid starts-->
 <div class="container-fluid">
@@ -94,6 +109,58 @@
 			</div>
 		@endforeach
 		
+            <div class="col-xl-12 xl-100">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Top 20 - 2022</h5>
+                             
+                            </div>
+                            <div class="card-body">
+                                <div class="user-status table-responsive latest-order-table">
+                                    <table class="table table-bordernone">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Numéro</th>
+                                            <th scope="col">Entreprise</th>
+                                            <th scope="col">Chiffre d'affaires</th>
+                                            <th scope="col">Devis</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            @php
+                                                $i=1;
+                                            @endphp
+                                            @forelse ($top20 as $item)
+                                                 @if ($i>20)
+                                                     @break;
+                                                 @endif
+
+                                                    <tr>
+                                                        <td style="font-size: 13px; font-weight : bold; ">{{ $i }}</td>
+                                                        <td class="digits" style="font-size: 13px; font-weight : bold; ">{{ $item->company_name }}</td>
+                                                        <td class="digits" style="font-size: 13px; font-weight : bold; ">{{ (number_format( $item->sales_amount , 0 , '.' , ',' )) }} </td>
+                                                        <td class="digits" style="font-size: 13px; font-weight : bold; ">{{ (number_format( $item->quotes_amount , 0 , '.' , ',' )) }} </td>
+                                                    </tr>
+
+                                               @php
+                                                   $i++
+                                               @endphp
+                                            @empty
+                                                Pas de données
+                                            @endforelse
+                                           
+                                       
+                                        </tbody>
+                                    </table>
+                                    <button class="btn btn-primary" onclick="showTop20();">Tout voir</button>
+                                </div>
+                                <div class="code-box-copy">
+                                    <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#example-head1" title="" data-original-title="Copy"><i class="icofont icofont-copy-alt"></i></button>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
         <div class="col-xl-12">
             <div class="card">
                 <div class="card-header">
@@ -102,7 +169,106 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-			<div class="col-xl-3 col-sm-6 xl-50">
+                        
+                        <div class="col-xl-3 col-sm-6 xl-50">
+                            <div class="order-graph sm-order-space">
+                                <h6>Classement Objectif Juillet</h6>
+                                
+                                <div class="order-graph-bottom sales-location">
+                                    <div class="media">
+                                        <div class="order-shape-primary"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Magloire&nbsp;&nbsp;<span class="">37%</span></h6>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="order-shape-secondary"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Joseph &nbsp;&nbsp;<span class="">25%</span></h6>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="order-shape-danger"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Jean Marie&nbsp;&nbsp;<span class="">19%</span></h6>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="order-shape-warning"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Leonel&nbsp;&nbsp;<span class="">0%</span></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 xl-50">
+                            <div class="order-graph sm-order-space">
+                                <h6>Classement Objectif Juin</h6>
+                                
+                                <div class="order-graph-bottom sales-location">
+                                    <div class="media">
+                                        <div class="order-shape-primary"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Magloire&nbsp;&nbsp;<span class="">139%</span></h6>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="order-shape-secondary"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Joseph &nbsp;&nbsp;<span class="">91.6%</span></h6>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="order-shape-danger"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Jean Marie&nbsp;&nbsp;<span class="">51.7%</span></h6>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="order-shape-warning"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Leonel&nbsp;&nbsp;<span class="">4%</span></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-sm-6 xl-50">
+                            <div class="order-graph sm-order-space">
+                                <h6>Classement Objectif Mai</h6>
+                                
+                                <div class="order-graph-bottom sales-location">
+                                    <div class="media">
+                                        <div class="order-shape-primary"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Magloire <span class="">283.6%</span></h6>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="order-shape-secondary"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Joseph &nbsp;&nbsp;<span class="">83,00%</span></h6>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="order-shape-danger"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Jean Marie&nbsp;&nbsp;<span class="">55,77%</span></h6>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="order-shape-warning"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Leonel&nbsp;&nbsp;<span class="">18,73%</span></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+			            <div class="col-xl-3 col-sm-6 xl-50">
                             <div class="order-graph sm-order-space">
                                 <h6>Classement Objectif Avril</h6>
                                 
@@ -110,25 +276,25 @@
                                     <div class="media">
                                         <div class="order-shape-primary"></div>
                                         <div class="media-body">
-                                            <h6 class="mb-0 me-0">Jean Marie <span class="">99.5%</span></h6>
+                                            <h6 class="mb-0 me-0">Jean Marie <span class="">104%</span></h6>
                                         </div>
                                     </div>
                                     <div class="media">
                                         <div class="order-shape-secondary"></div>
                                         <div class="media-body">
-                                            <h6 class="mb-0 me-0">Joseph &nbsp;&nbsp;<span class="">43.2%%</span></h6>
+                                            <h6 class="mb-0 me-0">Joseph &nbsp;&nbsp;<span class="">70%</span></h6>
                                         </div>
                                     </div>
                                     <div class="media">
                                         <div class="order-shape-danger"></div>
                                         <div class="media-body">
-                                            <h6 class="mb-0 me-0">Magloire&nbsp;&nbsp;<span class="">26.86%</span></h6>
+                                            <h6 class="mb-0 me-0">Magloire&nbsp;&nbsp;<span class="">33.75%</span></h6>
                                         </div>
                                     </div>
                                     <div class="media">
                                         <div class="order-shape-warning"></div>
                                         <div class="media-body">
-                                            <h6 class="mb-0 me-0">Leonel&nbsp;&nbsp;<span class="">4.7%</span></h6>
+                                            <h6 class="mb-0 me-0">Leonel&nbsp;&nbsp;<span class="">17.2%</span></h6>
                                         </div>
                                     </div>
                                 </div>
@@ -167,7 +333,9 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        <div style="display: flex; background-color:aqua; height:15px">
+
+                        </div>
                         <div class="col-xl-3 col-sm-6 xl-50">
                             <div class="order-graph">
                                 <h6>Classement Objectif Février</h6>
@@ -201,6 +369,7 @@
                             </div>
                         </div>
                         
+                        <br>
 			<div class="col-xl-3 col-sm-6 xl-50">
                             <div class="order-graph sm-order-space">
                                 <h6>Classement Objectif Janvier</h6>
@@ -233,7 +402,7 @@
                                 </div>
                             </div>
                         </div>
-			
+                        
 			<div class="col-xl-3 col-sm-6 xl-50">
                             <div class="order-graph sm-order-space">
                                 <h6>Classement Objectif Annuel</h6>
@@ -242,25 +411,25 @@
                                     <div class="media">
                                         <div class="order-shape-primary"></div>
                                         <div class="media-body">
-                                            <h6 class="mb-0 me-0">Joseph &nbsp;&nbsp;<span >27%</span></h6>
+                                            <h6 class="mb-0 me-0">Magloire &nbsp;&nbsp;<span >59.11%</span></h6>
                                         </div>
                                     </div>
                                     <div class="media">
                                         <div class="order-shape-secondary"></div>
                                         <div class="media-body">
-                                            <h6 class="mb-0 me-0">Magloire &nbsp;&nbsp;<span >23,3%</span></h6>
+                                            <h6 class="mb-0 me-0">Joseph &nbsp;&nbsp;<span >41.14%</span></h6>
                                         </div>
                                     </div>
                                     <div class="media">
                                         <div class="order-shape-danger"></div>
                                         <div class="media-body">
-                                            <h6 class="mb-0 me-0">Jean Marie&nbsp;<span >19,6%</span></h6>
+                                            <h6 class="mb-0 me-0">Jean Marie&nbsp;<span >29%</span></h6>
                                         </div>
                                     </div>
                                     <div class="media">
                                         <div class="order-shape-warning"></div>
                                         <div class="media-body">
-                                            <h6 class="mb-0 me-0">Leonel&nbsp;&nbsp;<span >5,4%</span></h6>
+                                            <h6 class="mb-0 me-0">Leonel&nbsp;&nbsp;<span >8%</span></h6>
                                         </div>
                                     </div>
                                 </div>
@@ -271,7 +440,138 @@
                 </div>
             </div>
         </div>
+
+        <!-- cumul année -->
 		
+        <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Année 2022</h5>
+                                <div class="card-header-right">
+                                    <ul class="list-unstyled card-option">
+                                        <li><i class="icofont icofont-simple-left"></i></li>
+                                        <li><i class="view-html fa fa-code"></i></li>
+                                        <li><i class="icofont icofont-maximize full-card"></i></li>
+                                        <li><i class="icofont icofont-minus minimize-card"></i></li>
+                                        <li><i class="icofont icofont-refresh reload-card"></i></li>
+                                        <li><i class="icofont icofont-error close-card"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-xl-3 col-sm-6 xl-50">
+                                        <div class="order-graph">
+                                            <h6>Valeur des Ventes : </h6>
+                                          
+                                             
+                                            <div class="order-graph-bottom">
+                                                @php
+                                                    $totalSales = 0;
+                                                @endphp
+                                                <script>
+                                                   
+                                                    var months = [];
+                                                    var sales = [];
+                                                    //alert("hello");
+                                                    console.log('before loop');
+                                                    console.log(sales);
+                                                </script>
+                                                @forelse ($year2022 as $year)
+                                                     <div class="media">
+                                                        <div class="order-shape-success"></div>
+                                                        <div class="media-body">
+                                                            @php
+                                                                $totalSales += $year->sales_amount;
+                                                            @endphp
+                                                            <script>
+                                                                months.push("{{ $months[$year->month] }}");
+                                                                sales.push({{ $year->sales_amount }});
+                                                                console.log(sales);
+                                                            </script>
+                                                            <h6 class="mb-0">{{  $months[$year->month] }}  
+                                                                <span class="pull-right">
+                                                                    {{ (number_format( $year->sales_amount , 0 , '.' , ',' )) }} XAF 
+                                                                </span>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                @empty
+                                                    
+                                                @endforelse
+                                               
+                                                
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+
+                                     <div class="col-xl-3 col-sm-6 xl-50">
+                                        <div class="order-graph">
+                                            <h6>Valeur des Devis : </h6>
+                                          
+                                             
+                                            <div class="order-graph-bottom">
+                                                @php
+                                                    $totalSales = 0;
+                                                @endphp
+                                                @forelse ($year2022 as $year)
+                                                     <div class="media">
+                                                        <div class="order-shape-success"></div>
+                                                        <div class="media-body">
+                                                            @php
+                                                                $totalSales += $year->sales_amount;
+                                                            @endphp
+                                                            <h6 class="mb-0">{{  $months[$year->month] }}  <span class="pull-right">{{ (number_format( $year->sales_amount , 0 , '.' , ',' )) }} XAF </span></h6>
+                                                        </div>
+                                                    </div>
+                                                @empty
+                                                    
+                                                @endforelse
+                                               
+                                                
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                         
+                                    
+                                </div>
+                                <div class="code-box-copy">
+                                    <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#example-head2" title="" 
+                                    data-original-title="Copy"><i class="icofont icofont-copy-alt"></i></button>
+                                
+                                </div>
+                            </div>
+                              <div class="card-body">
+                                <div class="row">
+                            
+                         
+                                    <div class="col-xl-6 xl-100">
+                                        <div class="order-graph xl-space">
+                                            <h6>Revenu Par Mois</h6>
+                                             <canvas id="barChart" width="400" height="400"></canvas>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-6 xl-100">
+                                        <div class="order-graph xl-space">
+                                            <h6>Revenu Par Mois</h6>
+                                             <canvas id="lineChart" width="400" height="400"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="code-box-copy">
+                                    <button class="code-box-copy__btn btn-clipboard" data-clipboard-target="#example-head2" title="" 
+                                    data-original-title="Copy"><i class="icofont icofont-copy-alt"></i></button>
+                                
+                                </div>
+                            </div>
+                        </div>
+            </div>
+
+            <!-- end cumul par an -->
+
 		<!-- Container-fluid starts-->
             <div class="container-fluid">
                 <div class="card">
@@ -354,6 +654,83 @@
 
     </div>
 </div>
+<!--script chart-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script>
+const ctx = document.getElementById('barChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: months,
+        datasets: [{
+            label: 'CA',
+            data: sales,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+
+<script>
+const ctx1 = document.getElementById('lineChart').getContext('2d');
+const myChart1 = new Chart(ctx1, {
+    type: 'line',
+    data: {
+        labels: months,
+        datasets: [{
+            label: 'CA',
+            data: sales,
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
 <!-- Container-fluid Ends-->
 
 

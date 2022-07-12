@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ProviderController;
 use App\Http\Controllers\StoreController;
+use App\Http\Controllers\TurnOverCompanyController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +26,7 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::post('/store/update/machine', [StoreController::class, 'updateMachine'])->name('store.update.machine');
 								Route::resources([
 									'turnover' => TurnOverController::class,
+									'turnovercompany' => TurnOverCompanyController::class,
 									'return' => ReturnController::class,
 									'company' => CompanyController::class,
 									'provider' => ProviderController::class,
@@ -32,6 +34,9 @@ Route::group(['middleware' => ['auth']], function () {
 								]);
 								
 								Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+								Route::get('/top20', [CompanyController::class, 'top20'])->name('top20');
+
 								Route::get('/suivi-commande', function(){ 
 									return view('command');
 								})->name('command');
