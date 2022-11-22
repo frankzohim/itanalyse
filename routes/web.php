@@ -8,6 +8,7 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ProviderController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\TurnOverCompanyController;
+use App\Http\Controllers\TrackingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +32,7 @@ Route::group(['middleware' => ['auth']], function () {
 									'company' => CompanyController::class,
 									'provider' => ProviderController::class,
 									'store' => StoreController::class,
+									'tracking' => TrackingController::class,
 								]);
 								
 								Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');

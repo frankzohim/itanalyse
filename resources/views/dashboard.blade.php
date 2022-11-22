@@ -170,6 +170,192 @@
                 <div class="card-body">
                     <div class="row">
                         
+						<div class="col-xl-3 col-sm-6 xl-50">
+                            <div class="order-graph sm-order-space">
+                                <h6>Classement Objectif Annuel</h6>
+                                
+                                <div class="order-graph-bottom sales-location">
+                                    <div class="media">
+                                        <div class="order-shape-primary"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Magloire &nbsp;&nbsp;<span>94.44%</span></h6>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="order-shape-secondary"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Joseph &nbsp;&nbsp;<span >84%</span></h6>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="order-shape-danger"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Jean Marie&nbsp;<span >57.57%</span></h6>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="order-shape-warning"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Leonel&nbsp;&nbsp;<span >34%</span></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 xl-50">
+                            <div class="order-graph sm-order-space">
+                                <h6>Classement Objectif Novembre</h6>
+                                
+                                <div class="order-graph-bottom sales-location">
+
+                                     <div class="media">
+                                        <div class="order-shape-primary"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Leonel&nbsp;&nbsp;<span class="">166.36%</span></h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="media">
+                                        <div class="order-shape-danger"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Joseph&nbsp;&nbsp;<span class="">17.76%</span></h6>
+                                        </div>
+                                    </div>
+
+                                     <div class="media">
+                                        <div class="order-shape-secondary"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Jean Marie &nbsp;&nbsp;<span class="">11.71%</span></h6>
+                                        </div>
+                                    </div>
+                                    
+                                   
+                                   
+                                    
+                                    <div class="media">
+                                        <div class="order-shape-warning"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Magloire&nbsp;&nbsp;<span class="">9.75%</span></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 xl-50">
+                            <div class="order-graph sm-order-space">
+                                <h6>Classement Objectif Octobre</h6>
+                                
+                                <div class="order-graph-bottom sales-location">
+
+                                     <div class="media">
+                                        <div class="order-shape-primary"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Magloire&nbsp;&nbsp;<span class="">131.20%</span></h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="media">
+                                        <div class="order-shape-danger"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Joseph&nbsp;&nbsp;<span class="">78.11%</span></h6>
+                                        </div>
+                                    </div>
+
+                                     <div class="media">
+                                        <div class="order-shape-secondary"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Jean Marie &nbsp;&nbsp;<span class="">29.37%</span></h6>
+                                        </div>
+                                    </div>
+                                    
+                                   
+                                   
+                                    
+                                    <div class="media">
+                                        <div class="order-shape-warning"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Leneol&nbsp;&nbsp;<span class="">0.25%</span></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 xl-50">
+                            <div class="order-graph sm-order-space">
+                                <h6>Classement Objectif Septembre</h6>
+                                
+                                <div class="order-graph-bottom sales-location">
+
+                                     <div class="media">
+                                        <div class="order-shape-primary"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Joseph&nbsp;&nbsp;<span class="">135%</span></h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="media">
+                                        <div class="order-shape-danger"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Magloire&nbsp;&nbsp;<span class="">128.35%</span></h6>
+                                        </div>
+                                    </div>
+
+                                     <div class="media">
+                                        <div class="order-shape-secondary"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Jean Marie &nbsp;&nbsp;<span class="">89.58%</span></h6>
+                                        </div>
+                                    </div>
+                                    
+                                   
+                                   
+                                    
+                                    <div class="media">
+                                        <div class="order-shape-warning"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Leneol&nbsp;&nbsp;<span class="">86.84%</span></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-sm-6 xl-50">
+                            <div class="order-graph sm-order-space">
+                                <h6>Classement Objectif Août</h6>
+                                
+                                <div class="order-graph-bottom sales-location">
+
+                                     <div class="media">
+                                        <div class="order-shape-secondary"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Joseph &nbsp;&nbsp;<span class="">113,9%</span></h6>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="media">
+                                        <div class="order-shape-primary"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Magloire&nbsp;&nbsp;<span class="">103.72%</span></h6>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="media">
+                                        <div class="order-shape-danger"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Jean Marie&nbsp;&nbsp;<span class="">63.55%</span></h6>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="order-shape-warning"></div>
+                                        <div class="media-body">
+                                            <h6 class="mb-0 me-0">Leonel&nbsp;&nbsp;<span class="">4.87%</span></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="col-xl-3 col-sm-6 xl-50">
                             <div class="order-graph sm-order-space">
                                 <h6>Classement Objectif Juillet</h6>
@@ -178,25 +364,25 @@
                                     <div class="media">
                                         <div class="order-shape-primary"></div>
                                         <div class="media-body">
-                                            <h6 class="mb-0 me-0">Magloire&nbsp;&nbsp;<span class="">37%</span></h6>
+                                            <h6 class="mb-0 me-0">Jean Marie&nbsp;&nbsp;<span class="">150%</span></h6>
                                         </div>
                                     </div>
                                     <div class="media">
                                         <div class="order-shape-secondary"></div>
                                         <div class="media-body">
-                                            <h6 class="mb-0 me-0">Joseph &nbsp;&nbsp;<span class="">25%</span></h6>
+                                            <h6 class="mb-0 me-0">Joseph &nbsp;&nbsp;<span class="">137%</span></h6>
                                         </div>
                                     </div>
                                     <div class="media">
                                         <div class="order-shape-danger"></div>
                                         <div class="media-body">
-                                            <h6 class="mb-0 me-0">Jean Marie&nbsp;&nbsp;<span class="">19%</span></h6>
+                                            <h6 class="mb-0 me-0">Magloire&nbsp;&nbsp;<span class="">51%</span></h6>
                                         </div>
                                     </div>
                                     <div class="media">
                                         <div class="order-shape-warning"></div>
                                         <div class="media-body">
-                                            <h6 class="mb-0 me-0">Leonel&nbsp;&nbsp;<span class="">0%</span></h6>
+                                            <h6 class="mb-0 me-0">Leonel&nbsp;&nbsp;<span class="">49.17%</span></h6>
                                         </div>
                                     </div>
                                 </div>
@@ -403,39 +589,8 @@
                             </div>
                         </div>
                         
-			<div class="col-xl-3 col-sm-6 xl-50">
-                            <div class="order-graph sm-order-space">
-                                <h6>Classement Objectif Annuel</h6>
-                                
-                                <div class="order-graph-bottom sales-location">
-                                    <div class="media">
-                                        <div class="order-shape-primary"></div>
-                                        <div class="media-body">
-                                            <h6 class="mb-0 me-0">Magloire &nbsp;&nbsp;<span >59.11%</span></h6>
-                                        </div>
-                                    </div>
-                                    <div class="media">
-                                        <div class="order-shape-secondary"></div>
-                                        <div class="media-body">
-                                            <h6 class="mb-0 me-0">Joseph &nbsp;&nbsp;<span >41.14%</span></h6>
-                                        </div>
-                                    </div>
-                                    <div class="media">
-                                        <div class="order-shape-danger"></div>
-                                        <div class="media-body">
-                                            <h6 class="mb-0 me-0">Jean Marie&nbsp;<span >29%</span></h6>
-                                        </div>
-                                    </div>
-                                    <div class="media">
-                                        <div class="order-shape-warning"></div>
-                                        <div class="media-body">
-                                            <h6 class="mb-0 me-0">Leonel&nbsp;&nbsp;<span >8%</span></h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+		
+        </div>
                    
                 </div>
             </div>

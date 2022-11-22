@@ -82,7 +82,7 @@
                     @endif
 
                     <li>
-                        <a class="sidebar-header" href="{{ route('turnovercompany.index') }}">
+                        <a class="sidebar-header" href="{{ route('tracking.index') }}">
                             <i data-feather="camera"></i>
                             <span>
                                 Traking Colis
